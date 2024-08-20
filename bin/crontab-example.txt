@@ -1,0 +1,38 @@
+# +----------------------------------------------------------------------------+
+# | RECORD FORMAT                                                              |
+# | -------------                                                              |
+# | minute(0-59) hour(0-23) day(1-31) month(1-12) weekday(0-6  0=Sunday)       |
+# +----------------------------------------------------------------------------+
+#
+# +-----------------------------------------------+----------------------------+
+# | Oracle Physical Backup (RMAN)                 | Weekly, Incremental (cdb1) |
+# +-----------------------------------------------+----------------------------+
+# Sunday, Full Incremental
+00 01 * * 0 /opt/oracle-dba-toolkit/bin/rman-backup.sh --db=cdb1 --sid=cdb1 --authenticationMethod=wallet --type=incremental --level=0 --catalog=catdb --email --noprompt > /opt/oracle-dba-toolkit/log/rman-backup-datanode-cdb1.job 2>&1
+#
+# Mon-Sat, Differential Incremental
+00 01 * * 1-6 /opt/oracle-dba-toolkit/bin/rman-backup.sh --db=cdb1 --sid=cdb1 --authenticationMethod=wallet --type=incremental --level=1 --catalog=catdb --email --noprompt > /opt/oracle-dba-toolkit/log/rman-backup-datanode-cdb1.job 2>&1
+#
+# Every 30 minutes, Archive Redo Logs Only
+15,45 * * * * /opt/oracle-dba-toolkit/bin/rman-backup.sh --db=cdb1 --sid=cdb1 --authenticationMethod=wallet --type=archivelog --catalog=catdb --noprompt --no-monitor-log > /opt/oracle-dba-toolkit/log/rman-backup-datanode-cdb1.job 2>&1
+#
+# +-----------------------------------------------+----------------------------+
+# | Oracle Physical Backup (RMAN)                 | Daily, Full (orcl)         |
+# +-----------------------------------------------+----------------------------+
+00 02 * * * /opt/oracle-dba-toolkit/bin/rman-backup.sh --db=orcl --sid=orcl --authenticationMethod=wallet --type=full --catalog=catdb --email --noprompt > /opt/oracle-dba-toolkit/log/rman-backup-datanode-orcl.job 2>&1
+#
+# +-----------------------------------------------+----------------------------+
+# | Oracle Logical Backup (Data Pump)             | Daily, Full (datadb)       |
+# +-----------------------------------------------+----------------------------+
+00 03 * * * /opt/oracle-dba-toolkit/bin/dpump-backup.sh --db=datadb --sid=cdb1 --authenticationMethod=wallet --dumpdir=DPUMP_DUMP_DIR --logdir=DPUMP_LOG_DIR --retention=3 --consistent --email --noprompt > /opt/oracle-dba-toolkit/log/dpump-backup-datanode-datadb.job 2>&1
+#
+# +-----------------------------------------------+----------------------------+
+# | Oracle Logical Backup (Data Pump)             | Daily, Full (soedb)        |
+# +-----------------------------------------------+----------------------------+
+00 04 * * * /opt/oracle-dba-toolkit/bin/dpump-backup.sh --db=soedb --sid=cdb1 --authenticationMethod=wallet --dumpdir=DPUMP_DUMP_DIR --logdir=DPUMP_LOG_DIR --retention=3 --consistent --email --noprompt > /opt/oracle-dba-toolkit/log/dpump-backup-datanode-soedb.job 2>&1
+#
+# +-----------------------------------------------+----------------------------+
+# | Oracle Logical Backup (Data Pump)             | Daily, Full (orcl)         |
+# +-----------------------------------------------+----------------------------+
+00 05 * * * /opt/oracle-dba-toolkit/bin/dpump-backup.sh --db=orcl --sid=orcl --authenticationMethod=wallet --dumpdir=DPUMP_DUMP_DIR --logdir=DPUMP_LOG_DIR --retention=3 --consistent --email --noprompt > /opt/oracle-dba-toolkit/log/dpump-backup-datanode-orcl.job 2>&1
+#

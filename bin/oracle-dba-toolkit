@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# +-----------------------------------------------------------------------------
+# | File:           oracle-dba-toolkit
+# | Author:         Jeffrey M. Hunter
+# | Description:    Oracle DBA Toolkit utility script.
+# | Compatibility:  Bash version 4 or higher.
+# | Coding style:   This script adheres to the Bash Script Style Guide
+# |                 published by Google with several exceptions:
+# |                 https://google.github.io/styleguide/shellguide.html
+# | Requirements:   conf/toolkit-defaults.conf
+# |                 functions/lib.sh
+# |                 functions/json.sh
+# | Documentation:  See: doc/README-oracle-dba-toolkit.txt
+# | Call syntax:    Use "oracle-dba-toolkit --help" to see the help and options.
+# | Repo:           https://gitlab.com/jeffreyhunter/oracle-dba-toolkit
+# +---------------------------------------------------------------------------
+
+#
+# Coming in Fall 2024
+#
