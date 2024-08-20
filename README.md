@@ -3,10 +3,10 @@
 <p align="center">
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=W45Y5ENDC7M9C)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://gitlab.com/jeffreyhunter/oracle-dba-toolkit/-/blob/main/LICENSE)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://gitlab.com/jeffreyhunter/oracle-dba-toolkit/activity)
-[![Maintainer](https://img.shields.io/badge/maintainer-Jeffrey%20M.%20Hunter-blue)](https://gitlab.com/jeffreyhunter)
-[![stability-alpha](https://img.shields.io/badge/stability-alpha-f4d03f.svg)](https://gitlab.com/jeffreyhunter/oracle-dba-toolkit)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/oraclejavanet/oracle-dba-toolkit/blob/main/LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/oraclejavanet/oracle-dba-toolkit/activity)
+[![Maintainer](https://img.shields.io/badge/maintainer-Jeffrey%20M.%20Hunter-blue)](https://github.com/oraclejavanet/)
+[![stability-alpha](https://img.shields.io/badge/stability-alpha-f4d03f.svg)](https://github.com/oraclejavanet/oracle-dba-toolkit)
 [![LinkedIn Profile](https://img.shields.io/badge/LinkedIn-oraclejavanet-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/oraclejavanet/)
 
 </p>
@@ -17,7 +17,7 @@
     <b>Coming in Fall 2024</b>
 </p>
 
-Written by [Jeffrey M. Hunter](https://gitlab.com/jhunter), the Oracle DBA
+Written by [Jeffrey M. Hunter](https://github.com/oraclejavanet/), the Oracle DBA
 Toolkit is a collection of Shell scripts, SQL scripts, PL/SQL code, C programs,
 and other useful utilities designed to facilitate the management and
 administration of Oracle databases. 
@@ -110,7 +110,7 @@ user `dbadmin` to `/opt/oracle-dba-toolkit` on Unix/Linux and
 
     ```
     cd ~/repos
-    git clone https://gitlab.com/jeffreyhunter/oracle-dba-toolkit.git
+    git clone https://github.com/oraclejavanet/oracle-dba-toolkit.git
     ```
 
 2. **Copy the Repository to the Database Server**
@@ -197,7 +197,7 @@ You can use PowerShell to install the Oracle DBA Toolkit on Microsoft Windows.
 
     ```
     cd "C:\Users\dbadmin\repos"
-    git clone https://gitlab.com/jeffreyhunter/oracle-dba-toolkit.git
+    git clone https://github.com/oraclejavanet/oracle-dba-toolkit.git
     ```
 
 2. **Copy the Repository to the Database Server**
@@ -645,10 +645,10 @@ Oracle DBA Toolkit.
 
 Copyright (c) 2024 Jeffrey M. Hunter.
 
-GitLab: [@jhunter](https://gitlab.com/jhunter)
+GitHub: [@oraclejavanet](https://github.com/oraclejavanet)
 
 This project is licensed under the
-[MIT License](https://gitlab.com/jeffreyhunter/oracle-dba-toolkit/-/blob/main/LICENSE).
+[MIT License](https://github.com/oraclejavanet/oracle-dba-toolkit/blob/main/LICENSE).
 Feel free to use, modify, and distribute the code in accordance with the terms
 of the license.
 
