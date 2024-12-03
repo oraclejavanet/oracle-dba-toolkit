@@ -14,7 +14,7 @@
 ## Overview
 
 <p>
-    <b>Coming in Fall 2024</b>
+    <b>Coming Q1 2025</b>
 </p>
 
 Written by [Jeffrey M. Hunter](https://github.com/oraclejavanet/), the Oracle DBA
